@@ -1,42 +1,23 @@
 <template>
-  <Carousel>
-    <template #slides="{ slidesCount }" >
-      <Slide v-for="(image, index) in images" :key="image.id">
-        <img :src="image.url" />
-        <button v-if="slidesCount > 1" @click="deleteImage(index)">x</button>
-      </Slide>
-    </template>
-
-    <template #addons>
-      <Navigation />
-    </template>
-  </Carousel>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="../components/banner/banner1.webp" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../components/banner/banner2.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="../components/banner/banner3.webp" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 </template>
-
-<script>
-import { defineComponent, registerRuntimeCompiler, toRefs } from "vue";
-import { Carousel, Pagination, Navigation, Slide } from "vue3-carousel";
-
-import "vue3-carousel/dist/carousel.css";
-
-export default defineComponent({
-  name: "Basic",
-  props: {
-    images: Array,
-  },
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation,
-  },
-
-  setup(props, { emit }) {
-    const { images } = toRefs(props);
-
-    const deleteImage = (index) => emit("delete-image", index);
-
-    return { images, deleteImage };
-  },
-});
-</script>

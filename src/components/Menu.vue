@@ -84,29 +84,32 @@
         v-if="!hadUser()"
         class="navbar-brand"
         @click="goToLogin()"
-        style="height: 100%"
+        style="height: 120px !important"
         ><img
-          class="img-navbar"
+          class="img-navbar navbar-brand"
           src="@/components/icons/user.png"
-          style="width: 60px; height: 60px; padding: 10px"
+          style="height: 60px; padding: 10px"
       /><span class="txt-navbar">Entrar</span></a>
-      <a v-else class="navbar-brand" @click="logout()" style="height: 100%"
+      
+      <a v-else class="navbar-brand" @click="logout()" style="height: 120px !important"
         ><img
-          class="img-navbar"
+          class="img-navbar navbar-brand"
           src="@/components/icons/logout.png"
-          style="width: 60px; height: 60px; padding: 10px"
+          style=" height: 60px; padding: 10px"
       /></a>
-       <a class="navbar-brand" @click="goToBiblioteca()"
+
+       <a class="navbar-brand" @click="goToBiblioteca()" style="height: 120px !important"
         ><img
           class="img-navbar navbar-brand"
           src="@/components/icons/livro.png"
-          style="padding: 10px; margin-bottom: 10px; width: 60px; height: 60px"
+          style="padding: 10px;   height: 60px"
         /><span class="txt-navbar">Biblioteca</span></a>
-      <a class="navbar-brand" @click="goToCarrinho()" style="height: 100%"
+
+      <a class="navbar-brand" @click="goToCarrinho()" style="height: 120px !important"
         ><img
-          class="img-navbar"
+          class="img-navbar navbar-brand"
           src="@/components/icons/carrinho-carrinho.png"
-          style="width: 60px; height: 60px; padding: 10px"
+          style="height: 60px; padding: 10px"
         /><span class="txt-navbar">Carrinho</span>
       </a>
       
@@ -186,8 +189,9 @@ export default {
 
 <style scoped>
 img {
-  width: 100%;
+
   height: 100%;
+
 }
 
 .navbar {
@@ -213,6 +217,7 @@ img {
   align-items: center;
   text-decoration: none;
   display: flex;
+  flex-direction: column;
   font-size: 1vw;
   height: 11vh;
 }
@@ -221,6 +226,11 @@ img {
 .navbar a:hover {
   background: #c7a312;
   color: black;
+}
+
+.navbar-brand{
+  height: 400px;
+
 }
 
 .navbar-brand:hover {
