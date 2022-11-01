@@ -51,18 +51,8 @@ e navegar para realizar as ações possíveis do usuário seja ele admin ou user
     <span class="sr-only">Next</span>
   </a>
 </div>
-  <div class="books">
-    <!-- Realiza um for por todos os livros registrado no sistema e os mostra para o usuário-->
-    <div v-for="book in paginate()" @click="goToBook(book.id)">
-      <Books
-          :name="book.name"
-          :price="book.price"
-          :categories="book.categories"
-          :promotion="book.promo"
-          :id="book.id"
-      />
-    </div>
-  </div>
+  
+
 
 
   <!-- Chama o component do footer -->
