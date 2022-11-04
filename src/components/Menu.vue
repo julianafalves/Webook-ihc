@@ -61,23 +61,7 @@
             Dropdown button
           </button>
           <p />
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <div v-if="getMatchedBooks().length > 0">
-              <li
-                v-for="book in getMatchedBooks()"
-                @click="goToBook(book.id)"
-                class="dropdown-item"
-                style="cursor: pointer"
-              >
-                {{ book.name }}
-              </li>
-            </div>
-            <div v-else>
-              <li class="dropdown-item">
-                Não temos nenhum livro <br />com esse nome
-              </li>
-            </div>
-          </ul>
+        
         </div>
       </div>
       <a
