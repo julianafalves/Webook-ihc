@@ -13,6 +13,7 @@ pelo cliente.
 
 - 12644964 &nbsp; Juliana Ferreira Alves
 
+- 9778623 &nbsp; Leonardo Moreira Kobe
 
 ## Conteúdo:
 
