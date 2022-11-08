@@ -15,6 +15,8 @@ pelo cliente.
 
 - 9778623 &nbsp; Leonardo Moreira Kobe
 
+- 11233668 &nbsp; Pedro Calciolari Jardim
+
 ## Conteúdo:
 
 - [Requisitos](#requisitos)
