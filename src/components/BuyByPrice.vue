@@ -39,7 +39,7 @@ export default {
   }
 
   .buy-button:hover{
-    background-color: #0915fd;
+    background-color: #0a13be;
   }
 
   
