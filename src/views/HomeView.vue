@@ -4,6 +4,8 @@ import Footer from "@/components/Footer.vue";
 import Menu from "@/components/Menu.vue";
 import Carrousel from "@/components/Carrousel.vue";
 import HighlightBanner from "@/components/HighlightBanner.vue";
+import BuyByPrice from "@/components/BuyByPrice.vue";
+
 </script>
 
 
@@ -24,6 +26,7 @@ e navegar para realizar as ações possíveis do usuário seja ele admin ou user
 
     <Carrousel style="margin:150px 50px 100px 50px"></Carrousel>
     <HighlightBanner style="margin:0px 50px 100px 50px"></HighlightBanner>
+    <BuyByPrice style="margin:0px 50px 100px 50px"></BuyByPrice>
     <!-- Chama o component do footer -->
     <Footer />
   </div>
