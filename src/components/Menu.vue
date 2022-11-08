@@ -8,7 +8,11 @@
         ><img
           class="img-navbar navbar-brand"
           src="@/components/icons/icon.png"
-          style="width: 110px; height: auto; padding: 10px"
+          style="position: absolute;
+width: 150px;
+height: 122.91px;
+left: 149px;
+top: 0px;"
       /></a>
      
       <select
@@ -16,7 +20,13 @@
         ref="drop"
         name="livros"
         id="book-select"
-        style="margin-left: 80px; margin-top: 15px"
+        style="position: absolute;
+width: 389px;
+height: 68px;
+left: 327px;
+top: 24px;
+"
+      
         class="form-select form-select-lg mb-3"
         @change="filter(this.$refs.drop.value)"
         v-model="this.dropdownCategory"
@@ -33,12 +43,19 @@
         </option>
       </select>
       <div>
-        <div class="input-group" style="max-width: 500px; margin-top: 30px">
+        <div class="input-group" style="position: absolute;
+width: 628px;
+height: 65.9px;
+left: 744px;
+top: 31.32px;
+
+
+transform: rotate(-0.12deg);">
           <input
             type="text"
             class="form-control"
             placeholder="Busque um livro"
-            style="max-height: 60px"
+            style="height: 60px; width: 400px;"
             v-model="textSearch"
             @focusout="active = false"
           />
@@ -68,33 +85,45 @@
         v-if="!hadUser()"
         class="navbar-brand"
         @click="goToLogin()"
-        style="height: 120px !important"
+        style="position: absolute;
+              width: 88px;
+              height: 62px;
+              left: 1509px;
+              top: 31px;"
         ><img
           class="img-navbar navbar-brand"
-          src="@/components/icons/user.png"
-          style="height: 60px; padding: 10px"
+          src="@/components/icons/Vector.png"
+          style="width: 46px; height: 42px; padding: 5px; vertical-align: middle "
       /><span class="txt-navbar">Entrar</span></a>
       
       <a v-else class="navbar-brand" @click="logout()" style="height: 120px !important"
         ><img
           class="img-navbar navbar-brand"
           src="@/components/icons/logout.png"
-          style=" height: 60px; padding: 10px"
+          style=" height: 60px; padding: 5px"
       /></a>
 
-       <a class="navbar-brand" @click="goToBiblioteca()" style="height: 120px !important"
+       <a class="navbar-brand" @click="goToBiblioteca()" style="position: absolute;
+width: 88px;
+height: 62px;
+left: 1597px;
+top: 31px;"
         ><img
           class="img-navbar navbar-brand"
-          src="@/components/icons/livro.png"
-          style="padding: 10px;   height: 60px"
-        /><span class="txt-navbar">Biblioteca</span></a>
+          src="@/components/icons/Carrinho.png"
+          style="width: 46px; height: 42px; padding: 5px; vertical-align: middle "
+        /><span class="txt-navbar">Carrinho</span></a>
 
-      <a class="navbar-brand" @click="goToCarrinho()" style="height: 120px !important"
+      <a class="navbar-brand" @click="goToCarrinho()" style="position: absolute;
+width: 88px;
+height: 62px;
+left: 1687px;
+top: 31px;"
         ><img
           class="img-navbar navbar-brand"
-          src="@/components/icons/carrinho-carrinho.png"
-          style="height: 60px; padding: 10px"
-        /><span class="txt-navbar">Carrinho</span>
+          src="@/components/icons/Book Shelf.png"
+          style="width: 46px; height: 42px; padding: 5px; vertical-align: middle "
+        /><span class="txt-navbar">Biblioteca</span>
       </a>
       
     </div>
@@ -187,6 +216,9 @@ img {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   display: flex;
+  position: absolute;
+  height: 122px;
+  left: 0px;
   align-items: center;
   font-family: "Grape Nuts", cursive;
   font-family: "Open Sans", sans-serif;
@@ -264,7 +296,11 @@ img {
 }
 
 .txt-navbar {
-  font-size: xx-large;
+  letter-spacing: 0;
+  line-height: normal;
+  min-height: 16px;
+  text-align: center;
+  width: 88px;
 }
 
 .navigate a {
@@ -288,7 +324,7 @@ img {
   }
 
   .img-navbar {
-    width: 40px;
+    object-fit: cover;
   }
 
   .txt-navbar {
